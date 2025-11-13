@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -19,11 +19,13 @@
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html">
+            <img src="KoMobilitet.svg" alt="KoMobilitet logo" />
+          </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
+          <li><a class="menuItem" href="register.html">Ansøg</a></li>
         </ul>
         <button class="burger">
           <span class="line"></span>
@@ -34,18 +36,171 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>ANSØGNING</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>
+            Ansøgning om tildeling af ko som midlertidigt offentligt
+            transportmiddel
+          </h2>
+          <p>
+            Udfyld venligst formularen nedenfor, så den passer til det ønskede
+            formål.
+          </p>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <label for="fornavn">Fornavn</label>
+          <input type="text" id="fornavn" name="fornavn" />
+          <p>Please enter a value</p>
+          <label for="efternavn">Efternavn</label>
+          <input type="text" id="efternavn" name="efternavn" />
+          <p>Please enter a value</p>
+          <label for="cpr">CPR-nummer</label>
+          <input type="text" id="cpr" name="cpr" />
+          <p>Please enter a value</p>
+          <legend>
+            <h3>Ønsket ko-type</h3>
+          </legend>
+          <label for="kotype">
+            <input type="radio" id="Malkeko" name="kotype" value="kotype" />
+            Malkeko (rolig, stabil kørsel)
+          </label>
+          <label for="kotype">
+            <input type="radio" id="Ungtyr" name="kotype" value="kotype" />
+            Ungtyr (hurtig, men stædig)
+          </label>
+          <label for="kotype">
+            <input type="radio" id="Mini-ko" name="kotype" value="kotype" />
+            Mini-ko (praktisk til bykørsel og små lejligheder)
+          </label>
+          <label for="kotype">
+            <input type="radio" id="El-ko" name="kotype" value="kotype" />
+            El-ko (oplades med kærnemælk – 100 % grøn energi)
+          </label>
+          <legend>
+            <h3>Transportbehov</h3>
+          </legend>
+          <label for="transportbehov">
+            <input
+              type="radio"
+              id="arbejde"
+              name="transportbehov"
+              value="transportbehov"
+            />
+            Daglig pendling til arbejde
+          </label>
+          <label for="transportbehov">
+            <input
+              type="radio"
+              id="Skolekørsel"
+              name="transportbehov"
+              value="transportbehov"
+            />
+            Skolekørsel
+          </label>
+          <label for="transportbehov">
+            <input
+              type="radio"
+              id="Fritidsbrug"
+              name="transportbehov"
+              value="transportbehov"
+            />
+            Fritidsbrug
+          </label>
+          <label for="transportbehov">
+            <input
+              type="radio"
+              id="Ko-sightseeing"
+              name="transportbehov"
+              value="transportbehov"
+            />
+            Ko-sightseeing
+          </label>
+          <legend>
+            <h3>Udstyr ønskes installeret</h3>
+          </legend>
+          <label for="udstyr">
+            <input type="radio" id="ko-saddel" name="udstyr" value="udstyr" />
+            Ko-saddel med sædevarme
+          </label>
+          <label for="udstyr">
+            <input type="radio" id="GPS" name="udstyr" value="udstyr" />
+            GPS
+          </label>
+          <label for="udstyr">
+            <input type="radio" id="kofanger" name="udstyr" value="udstyr" />
+            Kofanger
+          </label>
+          <label for="udstyr">
+            <input
+              type="radio"
+              id="Malkebæger-holder"
+              name="udstyr"
+              value="udstyr"
+            />
+            Malkebæger-holder
+          </label>
+
+          <div class="wrapper">
+            <h3>Underskrift</h3>
+
+            <p class="declaration">
+              Jeg erklærer hermed at ville fodre, pleje og tanke min ko med
+              minimum 2 kg hø pr. 10 km.
+            </p>
+
+            <form action="#" method="post" novalidate>
+              <div class="field-row">
+                <label for="signature">Underskrift:</label>
+                <!-- Hvis du vil have et skrivefelt til håndskrift via mus/finger, kan du udskifte med en signature-pad (canvas). -->
+                <input
+                  id="signature"
+                  name="signature"
+                  class="underline-input"
+                  type="text"
+                  placeholder="Skriv dit navn her"
+                />
+              </div>
+
+              <div class="field-row">
+                <label for="date">Dato:</label>
+                <input
+                  id="date"
+                  name="date"
+                  class="underline-input"
+                  type="date"
+                />
+              </div>
+
+              <!-- Alternativt større underskriftsfelt (kommentar: brug textarea for mere plads) -->
+              <!--
+      <div class="field-row">
+        <label for="signature2">Underskrift (stor):</label>
+        <textarea id="signature2" name="signature2" class="signature-area" rows="2" placeholder=""></textarea>
+      </div>
+      -->
+
+              <div class="actions">
+                <button type="submit">Indsend</button>
+              </div>
+            </form>
+          </div>
+        </form>
       </section>
       <section id="form-summary">
-        <h2>Summary</h2>
+        <h2>Opsamling</h2>
         <article>
           <p class="placeholder">Opsummering</p>
+
+          <div>
+            <p>Fornavn: <span id="first_name_output2"></span></p>
+            <p>Last name: <span id="last_name-output"></span></p>
+            <p>CPR-nummer: <span id="cpr_number-output"></span></p>
+            <p>Ønsket ko-type: <span id="cow_type-output"></span></p>
+            <p>Transportbehov: <span id="transport-output"></span></p>
+            <p>Udstyr ønskes installeret: <span id="install-output"></span></p>
+            <p>Underskrift: <span id="sign-output"></span></p>
+          </div>
         </article>
       </section>
     </main>
@@ -76,6 +231,57 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("webform");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Stop genindlæsning
+
+          // 1. Hent værdier
+          const fornavn = document.getElementById("fornavn").value.trim();
+          const efternavn = document.getElementById("efternavn").value.trim();
+          const cpr = document.getElementById("cpr").value.trim();
+          const underskrift = document.getElementById("signature").value.trim();
+          const dato = document.getElementById("date").value;
+
+          // 2. Find den valgte ko-type
+          const kotype = document.querySelector('input[name="kotype"]:checked');
+          const koValg = kotype
+            ? kotype.parentElement.textContent.trim()
+            : "Ikke valgt";
+
+          // 3. Find transportbehov
+          const transport = document.querySelector(
+            'input[name="transportbehov"]:checked'
+          );
+          const transportValg = transport
+            ? transport.parentElement.textContent.trim()
+            : "Ikke valgt";
+
+          // 4. Find udstyr
+          const udstyr = document.querySelector('input[name="udstyr"]:checked');
+          const udstyrValg = udstyr
+            ? udstyr.parentElement.textContent.trim()
+            : "Ikke valgt";
+
+          // 5. Opdater opsummeringssektionen
+          document.getElementById("first_name_output2").textContent = fornavn;
+          document.getElementById("last_name-output").textContent = efternavn;
+          document.getElementById("cpr_number-output").textContent = cpr;
+          document.getElementById("cow_type-output").textContent = koValg;
+          document.getElementById("transport-output").textContent =
+            transportValg;
+          document.getElementById("install-output").textContent = udstyrValg;
+          document.getElementById("sign-output").textContent =
+            underskrift + (dato ? " (" + dato + ")" : "");
+
+          // 6. (Valgfrit) Skjul "Opsummering"-placeholder
+          document.querySelector(".placeholder").style.display = "none";
+          alert("Dine oplysninger er nu gemt i opsummeringen!");
+          document.querySelector(".placeholder").style.display = "none";
+        });
+      });
+    </script>
   </body>
 </html>

@@ -30,3 +30,263 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+.form-group:has(:user.invalid) {
+  input {
+    outline: 3px solid #f005;
+    border-color: darkred;
+  }
+}
+.form-group:has(:user-valid) {
+  outline: 3px solid green;
+}
+.error-messge {
+  display: block;
+}
+.form-group:has(:required) {
+  label::after {
+    content: "*";
+    color: red;
+  }
+}
+
+:root {
+  --g1: #fff; /* mørk lilla/blå */
+  --g2: #fff; /* turkis */
+  --white: #ffffff;
+  --radius: 10px;
+}
+
+/* Moderne knap */
+.btn-modern {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+}
+
+/* Dekorativ pil */
+.btn-modern::after {
+  content: "→";
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover-effekt */
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-modern:hover::after {
+  transform: translateX(4px);
+}
+
+/* Fokus-tilstand (tilgængelighed) */
+.btn-modern:focus {
+  outline: 3px solid rgba(79, 70, 229, 0.3);
+  outline-offset: 3px;
+}
+
+/*UNDERSKRIFT */
+
+form {
+  margin-top: 8px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+label {
+  min-width: 110px;
+  font-size: 16px;
+  font-weight: 400; /* undgå fed */
+}
+
+/* Indbyggede "linie"-inputs */
+.underline-input {
+  border: none;
+  border-bottom: 2px solid var(--line-color);
+  padding: 6px 8px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  min-width: 260px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Datofelt mindre bredt */
+input[type="date"].underline-input {
+  min-width: 180px;
+  padding: 6px 8px 8px 8px;
+}
+
+/* Alternativ til "underskrift" hvis man vil skrive større: textarea uden ramme */
+.signature-area {
+  border: none;
+  border-bottom: 2px solid var(--line-color);
+  padding: 8px 6px;
+  font-size: 16px;
+  min-width: 360px;
+  max-width: 100%;
+  resize: vertical;
+  background: transparent;
+  outline: none;
+}
+
+.placeholder {
+  text-decoration: underline;
+} 
+
+/* Valgfri submit-knap */
+.actions {
+  margin-top: 20px;
+}
+
+button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Udskriftsvenligt */
+@media print {
+  button {
+    display: none;
+  }
+  .wrapper {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Små skærme */
+@media (max-width: 520px) {
+  label {
+    min-width: 100px;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p.declaration {
+    font-size: 16px;
+  }
+}
+
+#webform {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 700px;
+}
+
+/* Labels */
+#webform label {
+  font-weight: 400; /* ikke fed */
+  font-size: 16px;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+/* Tekstfelter med linje under */
+#webform input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #111;
+  padding: 6px 8px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Fejltekst */
+#webform p {
+  font-size: 14px;
+  color: #d33;
+  margin: 4px 0 0 0;
+}
+
+/* Sektionstitler (legend med h3) */
+#webform legend {
+  margin-top: 28px;
+  margin-bottom: 4px;
+}
+
+#webform h3 {
+  font-weight: 400; /* ikke fed */
+  font-size: 20px;
+  margin: 0;
+  color: #111;
+}
+
+/* Radio-knapper */
+#webform input[type="radio"] {
+  accent-color: #111; /* farven matcher linjerne */
+  transform: scale(1.1);
+}
+
+#webform label[for="kotype"],
+#webform label[for="transportbehov"],
+#webform label[for="udstyr"] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+/* Gør radio-grupper lidt mere luftige */
+#webform label + label {
+  margin-top: 6px;
+}
+
+/* Wrapper i bunden */
+.wrapper {
+  margin-top: 30px;
+}
+
+/* Responsiv justering */
+@media (max-width: 520px) {
+  #webform {
+    gap: 14px;
+  }
+
+  #webform h3 {
+    font-size: 18px;
+  }
+
+  #webform input[type="text"] {
+    max-width: 100%;
+  }
+}
+
+/*SUMMERY/*
+

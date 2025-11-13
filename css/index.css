@@ -1,0 +1,20 @@
+[popover]::backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.264);
+}
+
+[popover] {
+  position: fixed;
+
+  max-height: 90vh;
+  max-width: 50ch;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20 px;
+}
+
+img {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
