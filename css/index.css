@@ -1,0 +1,49 @@
+[popover]::backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.264);
+}
+
+[popover] {
+  position: fixed;
+
+  max-height: 90vh;
+  max-width: 50ch;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20 px;
+}
+
+img {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Dark mode */
+.dark {
+  background-color: #545353;
+  color: #020202;
+}
+
+.dark a {
+  color: rgb(72, 72, 74);
+}
+
+.dark .daily_card,
+.dark .news_card {
+  background-color: #222;
+  border-color: #333;
+}
+
+.dark header,
+.dark footer {
+  background-color: #000;
+}
+
+.dark {
+  --color-menu-bg: #2b3a63; /* En mørkere, mere behagelig blå */
+}
+
+.dark {
+  --color-bg: #3a3a2a; /* virker ikke!!????? */
+}

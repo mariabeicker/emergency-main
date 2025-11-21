@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Rubik";
-  src: url("../fonts/Rubik-VariableFont_wght.woff2") format("woff2"), url("/fonts/Rubik-Regular.woff") format("woff");
+  src: url("../fonts/Rubik-VariableFont_wght.woff2") format("woff2"),
+    url("/fonts/Rubik-Regular.woff") format("woff");
   font-weight: var(--font-weight-regular);
   font-style: normal;
 }
@@ -23,4 +24,37 @@
   src: url("../fonts/Rubik-VariableFont_wght.woff2") format("woff2");
   font-weight: var(--font-weight-medium);
   font-style: normal;
+}
+
+/* Standard (light mode) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Eventuel styling af header/nav i dark mode */
+body.dark header,
+body.dark nav {
+  background-color: #1e1e1e;
+}
+
+/* Knappen */
+#toggle {
+  cursor: pointer;
+  padding: 8px 15px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+}
+
+body.dark #toggle {
+  background: #ddd;
+  color: #000;
 }

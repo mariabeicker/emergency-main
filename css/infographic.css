@@ -40,3 +40,35 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
 }
+/* Standard (light mode) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Eventuel styling af header/nav i dark mode */
+body.dark header,
+body.dark nav {
+  background-color: #1e1e1e;
+}
+
+/* Knappen */
+#toggle {
+  cursor: pointer;
+  padding: 8px 15px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+}
+
+body.dark #toggle {
+  background: #ddd;
+  color: #000;
+}

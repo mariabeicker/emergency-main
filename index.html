@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -18,11 +19,13 @@
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html">
+            <img src="KoMobilitet.svg" alt="KoMobilitet logo" />
+          </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
+          <li><a class="menuItem" href="register.html">Ansøg</a></li>
         </ul>
         <button class="burger">
           <span class="line"></span>
@@ -33,55 +36,123 @@
     </header>
     <section id="main-disclamer">
       <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
+        <button id="toggle">Dark mode</button>
         <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
+          <h1>Alle køer bliver udnævnt som “midlertidige busser”</h1>
+          <p class="sub">
+            Pludselig erklæres alle danske køer som “midlertidige busser” under
+            et systemnedbrud. Folk prøver at pendle på dem, men køerne går kun
+            mod marker og kaffepauser.
+          </p>
         </div>
       </div>
     </section>
     <main>
       <section id="daily">
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img id="ansoegning" src="koansøgning.png" alt="teaser_img" />
           <div class="daily_text">
-            <h2>Teaser</h2>
+            <h2>Vil du have din egen ko? Send din ansøgning allerede i dag.</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
+              Alle har ret til at ansøge om deres egen ko, men du vil blive
+              vurderet ud fra din sociale status. Du sende din ansøgning via
+              linket nedenfor.
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <a href="register.html" class="cta_btn">Ansøg</a>
           </div>
         </article>
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
+          <img src="ChatGPT Image 11. nov. 2025, 11.12.16.png" alt="news" />
+          <section class="faq-section">
+            <div class="daily_text">
+              <h2>Kaos eller grøn fremtid</h2>
+              <p>
+                Mens eksperter advarer om uforudsigeligt kaos, hylder
+                politikerne udviklingen som et banebrydende skridt mod
+                bæredygtig energi og en grønnere verden.
+              </p>
+              <details>
+                <summary>Se mere</summary>
+                <p>
+                  Eksperter forudser, at det kan blive et af de største tilfælde
+                  af kaos, vi har set i nyere tid. Politikerne derimod ser det
+                  som et vigtigt skridt mod en grønnere fremtid og et symbol på
+                  bæredygtig energi. Billedet illustrerer, hvordan denne vision
+                  i praksis kunne tage sig ud.
+                </p>
+              </details>
+            </div>
+          </section>
         </article>
       </section>
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Kør grønt – med KoMobilitet!</h3>
+          <p>
+            Systemnedbruddet i det offentlige kan være et bæredygtigt bud på
+            fremtidens transport, hvor vi tager miljøet alvorligt.
+          </p>
+          <img src="Himmel.png" alt="news_img" />
+          <button popovertarget="koInfo" class="cta_btn">Læs mere</button>
+
+          <!-- Popover-elementet -->
+          <div id="koInfo" popover>
+            <h4>KoMobilitet</h4>
+            <p>
+              KoMobilitet er et nyt grønt initiativ, der forbinder land og by
+              gennem bæredygtig samkørsel.
+            </p>
+
+            <h5>Fra mark til motorvej</h5>
+            <p>
+              Projektet gør det muligt for lokale landmænd og byboere at dele
+              transport, reducere CO2-udledning og samtidig spare penge.
+              Deltagerne kan booke en plads i en af de mange ko-venlige biler
+              via en app, som både viser ruten og mængden af hø, der kan
+              medbringes.
+            </p>
+
+            <h5>Bæredygtighed i centrum</h5>
+            <p>
+              Initiativet fokuserer på miljøvenlige løsninger, såsom elektriske
+              vogne og planlægning af ruter, der minimerer tomkørsel. Målet er
+              at gøre pendling grønnere og mere hyggelig, hvor både dyr og
+              mennesker nyder turen.
+            </p>
+
+            <img src="Himmel.png" alt="kohimmel" />
+
+            <h5>Lokalsamfundet bakker op</h5>
+            <p>
+              Flere lokale skoler og virksomheder har meldt sig som partnere, og
+              interessen for KoMobilitet vokser dag for dag. Organisatorerne
+              håber, at initiativet kan inspirere andre regioner til at tænke
+              grønt og kreativt om transport.
+            </p>
+
+            <button popovertarget="koInfo" popovertargetaction="hide">
+              Luk
+            </button>
+            <!-- Popover-elementet slut -->
+          </div>
         </article>
         <article class="news_card">
           <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
+          <p>Vi bliver nødt til at skabe struktur.</p>
+          <img src="kaos.png" alt="news_img" />
           <a class="cta_btn" href="">Læs mere</a>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
+          <h3>Kørerne skaber rekort lange køer på motorvejene</h3>
+          <p>
+            Trafikkaosset nåede nye højder i morges, da tusindvis af pendlere
+            tog turen mod arbejde på deres trofaste køer. Motorvejen blev
+            hurtigt forvandlet til et hav af horn, haler og høtyve, da de
+            langsomme transportmidler nægtede at sætte farten op. Politiet
+            opfordrer nu til tålmodighed og måske en ekstra klump hø til at
+            bestikke trafikken fremad.
+          </p>
+          <img src="kø.jpg" alt="news_img" />
           <a class="cta_btn" href="">Læs mere</a>
         </article>
       </section>
@@ -114,6 +185,7 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
     <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
